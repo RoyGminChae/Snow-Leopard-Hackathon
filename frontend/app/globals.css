@@ -1,32 +1,60 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-ns-bg-primary: #FAFAF8;
+  --color-ns-bg-secondary: #F0EFEB;
+  --color-ns-bg-tertiary: #E8E6E1;
+  --color-ns-surface: #FFFFFF;
+  --color-ns-text-primary: #1A1A1A;
+  --color-ns-text-secondary: #6B6860;
+  --color-ns-text-muted: #9C9890;
+  --color-ns-accent: #E8553A;
+  --color-ns-accent-hover: #D44A31;
+  --color-ns-accent-subtle: #FFF0EC;
+  --color-ns-border: #E2E0DB;
+  --color-ns-border-strong: #D0CDC6;
+  --color-ns-success: #2D8A56;
+  --color-ns-warning: #C97E1B;
+  --color-ns-danger: #C0392B;
+  --font-display: "DM Serif Display", serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-:root {
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --ns-bg-primary: #FAFAF8;
+    --ns-bg-secondary: #F0EFEB;
+    --ns-bg-tertiary: #E8E6E1;
+    --ns-surface: #FFFFFF;
+    --ns-text-primary: #1A1A1A;
+    --ns-text-secondary: #6B6860;
+    --ns-text-muted: #9C9890;
+    --ns-accent: #E8553A;
+    --ns-accent-hover: #D44A31;
+    --ns-accent-subtle: #FFF0EC;
+    --ns-border: #E2E0DB;
+    --ns-border-strong: #D0CDC6;
+    --ns-success: #2D8A56;
+    --ns-warning: #C97E1B;
+    --ns-danger: #C0392B;
+
+    --ns-pin-gym: #E8553A;
+    --ns-pin-restaurant: #D4A017;
+    --ns-pin-train: #2980B9;
+    --ns-pin-bar: #8E44AD;
+    --ns-pin-golf: #27AE60;
+    --ns-pin-barber: #E67E22;
+
+    --ns-font-display: "DM Serif Display", serif;
+    --ns-font-body: "DM Sans", sans-serif;
+    --ns-font-mono: "JetBrains Mono", monospace;
+  }
+  
+  body {
+    background-color: var(--ns-bg-primary);
+    color: var(--ns-text-primary);
+    font-family: var(--ns-font-body);
   }
 }
